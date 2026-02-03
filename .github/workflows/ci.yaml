@@ -91,7 +91,7 @@ jobs:
           - { platform: manylinux2014, arch: s390x, omit: ${{ env.skip_ci_redundant_jobs || env.skip_slow_jobs }} }
           - { platform: musllinux_1_2, arch: x86_64 }
           - { platform: musllinux_1_2, arch: aarch64 }
-          - { platform: manylinux_2_39, arch: riscv64, omit: ${{ env.skip_ci_redundant_jobs || env.skip_slow_jobs }} }
+          - { platform: manylinux_2_39, arch: riscv64, omit: ${{ env.skip_slow_jobs }} }
 
   linux_libyaml:
     needs: [make_linux_libyaml_matrix]
